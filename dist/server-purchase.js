@@ -2,7 +2,7 @@
 export async function main(ns) {
     // How much RAM each purchased server will have. In this case, it'll
     // be 8GB.
-    const ram = 64;
+    const ram = 8;
 
     // Iterator we'll use for our loop
     let i = 0;
@@ -20,6 +20,7 @@ export async function main(ns) {
             let hostname = ns.purchaseServer("pserv-" + i, ram);
             ns.scp("early-hack-template.js", hostname);
             ns.exec("early-hack-template.js", hostname, 3);
+            ns.tprint("purchased pserv-" + i);
             ++i;
         }
         //Make the script wait for a second before looping again.

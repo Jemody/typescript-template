@@ -40,4 +40,6 @@ export async function main(ns) {
         }
     }
 
+    ns.tprint("All possible servers have been nuked :)");
+
 }
