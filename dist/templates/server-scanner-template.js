@@ -1,10 +1,12 @@
 export async function main(ns) {
-    const servers = new Set();
+    const visited = new Set();
 
     function dfs(host) {
-        if (servers.has(host)) return;
+        if (visited.has(host)) return;
 
-        servers.add(host);
+        visited.add(host);
+
+        //Custom logic goes here
 
         const neighbors = ns.scan(host);
         for (const neighbor of neighbors) {
@@ -13,4 +15,5 @@ export async function main(ns) {
     }
     
     dfs("home");
+    
 }
