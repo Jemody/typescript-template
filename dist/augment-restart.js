@@ -2,19 +2,11 @@
 export async function main(ns) {
     // Array of all servers that don't need any ports opened
     // to gain root access. These have 16 GB of RAM
-    const servers0Port = ["sigma-cosmetics",
-                        "joesguns",
-                        "nectar-net",
-                        "hong-fang-tea",
-                        "harakiri-sushi",
-												"foodnstuff"];
+    const servers0Port = ["sigma-cosmetics", "joesguns", "nectar-net", "hong-fang-tea", "harakiri-sushi", "foodnstuff"];
 
     // Array of all servers that only need 1 port opened
     // to gain root access. These have 32 GB of RAM
-    const servers1Port = ["neo-net",
-                        "zer0",
-                        "max-hardware",
-                        "iron-gym"];
+    const servers1Port = ["neo-net", "zer0", "max-hardware", "iron-gym"];
 
     // Copy our scripts onto each server that requires 0 ports
     // to gain root access. Then use nuke() to gain admin access and
