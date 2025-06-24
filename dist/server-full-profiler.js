@@ -30,7 +30,7 @@ export async function main(ns) {
 	ns.tprint("Max Ram: " + MaxRam);
 	ns.tprint("Used Ram: " + UsedRam);
 	ns.tprint("Minimum Security Level: " + MinSec);
-	ns.tprint("Current Security Level" + CurSec);
+	ns.tprint("Current Security Level: " + CurSec);
 	ns.tprint("Time to Hack: " + HackTime + "s");
 	ns.tprint("Time to Grow: " + GrowTime + "s");
 	ns.tprint("Time to Weaken: " + WeakenTime + "s");
