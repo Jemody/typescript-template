@@ -36,7 +36,7 @@ export async function main(ns) {
             }
 
             ns.nuke(server);
-            ns.tprint("Nuked: " + $(server));
+            ns.tprint(`Nuked: ${server}`);
         }
     }
 
