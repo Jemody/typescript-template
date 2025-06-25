@@ -4,12 +4,12 @@ export async function main(ns) {
     for (let i = 0; i < pserv.length; i++) {
         const priv = pserv[i];
         const privram = ns.getServerMaxRam(pserv[i]);
-        const runtime = Math.floor(privram / 2.65);
+        const runtime = Math.floor(privram / 2.75);
 
         ns.killall(priv);
-        ns.rm("early-hack-template.js", priv);
-        ns.scp("early-hack-template.js", priv);
-        ns.exec("early-hack-template.js", priv, runtime);
+        ns.rm("basic-hack.js", priv);
+        ns.scp("basic-hack.js", priv);
+        ns.exec("basic-hack.js", priv, runtime);
 
         ns.tprint("Updated " + priv + " to run with " + runtime + " threads.");
     }

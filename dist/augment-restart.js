@@ -14,9 +14,9 @@ export async function main(ns) {
     for (let i = 0; i < servers0Port.length; ++i) {
         const serv = servers0Port[i];
 
-        ns.scp("early-hack-template.js", serv);
+        ns.scp("templates/early-hack-template.js", serv);
         ns.nuke(serv);
-        ns.exec("early-hack-template.js", serv, 6);
+        ns.exec("templates/early-hack-template.js", serv, 6);
     }
 
     // Wait until we acquire the "BruteSSH.exe" program
@@ -30,9 +30,9 @@ export async function main(ns) {
     for (let i = 0; i < servers1Port.length; ++i) {
         const serv = servers1Port[i];
 
-        ns.scp("early-hack-template.js", serv);
+        ns.scp("templates/early-hack-template.js", serv);
         ns.brutessh(serv);
         ns.nuke(serv);
-        ns.exec("early-hack-template.js", serv, 12);
+        ns.exec("templates/early-hack-template.js", serv, 12);
     }
 }
