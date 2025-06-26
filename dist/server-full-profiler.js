@@ -25,7 +25,7 @@ export async function main(ns) {
 
 	ns.tprint("Profiling Server: " + target);
 	ns.tprint("-------------------");
-	ns.tprint("Max Money: " + MaxMon);
+	ns.tprint("Maximum Money: " + MaxMon);
 	ns.tprint("Current Money: " + CurMon);
 	ns.tprint("Max Ram: " + MaxRam);
 	ns.tprint("Used Ram: " + UsedRam);
