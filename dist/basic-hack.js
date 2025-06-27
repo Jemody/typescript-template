@@ -27,7 +27,7 @@ export async function main(ns) {
             const curlev = ns.getHackingLevel();
             const bigbank = ns.getServerMaxMoney(server);
 
-            if ((reqlev <= Math.floor(curlev / 2) || reqlev == 1) && bigbank > 0) {
+            if ((reqlev <= Math.floor(curlev / 2) || reqlev == 1) && bigbank > 0 && ns.hasRootAccess(server) == true) {
                 if (best === "" || bigbank > ns.getServerMaxMoney(best)) {
                     best = server;
                 }
@@ -65,8 +65,9 @@ export async function main(ns) {
             target = newTarget;
 
             ns.print(`Switching target to ${target}.`);
+            cyclecount = 0;
         }
-        cyclecount = 0;
+        
         ns.print(`Cyclecount: ${cyclecount}`);
 	}
 }

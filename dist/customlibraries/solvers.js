@@ -450,7 +450,7 @@ solvers["Shortest Path in a Grid"] = (data) => {
     var path = findWay([0,0], [data.length-1, data[0].length-1], data );
     if ( path ) return annotate(path);
     return "";
-}
+};
 
 solvers["HammingCodes: Integer to encoded Binary"] = (value) => {
     // encoding following Hammings rule
@@ -627,7 +627,7 @@ solvers["Compression I: RLE Compression"] = (data) => {
         pos++;
     }
     return compression;
-}
+};
 
 solvers["Square Root"] = (data) => {
     const num = BigInt(data);
@@ -654,4 +654,4 @@ solvers["Square Root"] = (data) => {
     // Return the closest integer
     return high.toString();
     
-}
+};
