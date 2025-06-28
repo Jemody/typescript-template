@@ -48,6 +48,17 @@ export async function main(ns) {
 
     while (true) {
 
+        cyclecount++
+        if (cyclecount >= 50) {
+            const newTarget = chooseTarget();
+            target = newTarget;
+
+            ns.print(`Switching target to ${target}.`);
+            cyclecount = 0;
+        }
+        
+        ns.print(`Cyclecount: ${cyclecount}`);
+
 		if (ns.getServerSecurityLevel(target) > maxsec) {
 			// If the server's security level is above our threshold, weaken it
 			await ns.weaken(target);
@@ -58,16 +69,5 @@ export async function main(ns) {
 			// Otherwise, hack it
 			await ns.hack(target);
 		}
-
-        cyclecount++
-        if (cyclecount >= 10) {
-            const newTarget = chooseTarget();
-            target = newTarget;
-
-            ns.print(`Switching target to ${target}.`);
-            cyclecount = 0;
-        }
-        
-        ns.print(`Cyclecount: ${cyclecount}`);
 	}
 }
