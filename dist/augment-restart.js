@@ -16,7 +16,7 @@ export async function main(ns) {
 
         ns.scp("basic-hack.js", serv);
         ns.nuke(serv);
-        ns.exec("basic-hack.js", serv, 6);
+        ns.exec("basic.hack.js", serv, 6);
     }
 
     // Wait until we acquire the "BruteSSH.exe" program
